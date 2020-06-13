@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -25,7 +23,7 @@ public class Main {
 
         greetings("Марк");
 
-        System.out.println(eighth(2012, 2016, 2020, 2024));
+        leapyear(2021);
 
 
     }
@@ -64,18 +62,19 @@ public class Main {
         System.out.println(name);
     }
 
-//    public static void year(int x) {
-//        if (x  2 == 4 ) {
-//            System.out.println("Невисокосный год " + x);
+    public static void leapyear(int year) {
+        if (year % 100 ==0 && year % 400 ==0 || year % 100!=0 && year % 4 ==0) {
+            System.out.println(year+" год "+" високосный");
+        } else {
+            System.out.println(year+" год "+"не является високосны");
+        }
+    }
+
+//    public static boolean leapyear(int year){
+//        if (year % 100 != 0 && year % 4 == 0 && year % 400 == 0){
+//            return true;
 //        } else {
-//            System.out.println("Високосный год " + x);
+//            return false;
 //        }
-//    }
-
-//    public static boolean eighth(int year){
-//        return year % 100 != 0 && year % 4 == 0 || year % 400 ==0;
-//    }
-//}
-
 }
 
