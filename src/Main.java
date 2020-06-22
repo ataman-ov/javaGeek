@@ -62,7 +62,6 @@ public class Main {
         System.out.println(name);
     }
 
-
     public static void leapyear(int year) {
         if (year % 100 ==0 && year % 400 ==0 || year % 100!=0 && year % 4 ==0) {
             System.out.println(year+" год "+" високосный");
